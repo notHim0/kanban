@@ -46,6 +46,7 @@ func (app *App) Register(w http.ResponseWriter, r *http.Request){
 	json.NewEncoder(w).Encode(types.UserResponse{Username: cred.Username, Token: tokenString, Id: user.Id})
 }
 
+//function for user login
 func (app *App) Login(w http.ResponseWriter, r *http.Request){
 	var cred types.Credentials
 
